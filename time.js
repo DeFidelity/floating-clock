@@ -3,7 +3,6 @@ let minuterCl = document.querySelector(".min")
 let secondsCl = document.querySelector(".sec")
 let periodCl = document.querySelector(".period")
 
-let date = document.querySelector(".date")
 
 function getTime() {
     var date = new Date();
@@ -26,7 +25,6 @@ function getTime() {
     minuterCl.innerHTML = min;
     secondsCl.innerHTML = sec;
     periodCl.innerHTML = period;
-    date.innerHTML = date;
 }
 
 getTime()

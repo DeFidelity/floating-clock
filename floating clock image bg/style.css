@@ -20,6 +20,14 @@ body {
     to {background-position:10000px 0;}
 }
 
+@keyframes move-clock {
+  5% { top: 0; left: 0; }
+  25% { top: 200px; left: 0px; }
+  50% { top: 200px; left: calc(100% - 320px); }
+  75% { top: 0px; left: calc(100% - 320px); }
+  100% { top: 0px; left: 0; }
+}
+
 .stars, .twinkling, .clouds {
   position:absolute;
   top:0;
@@ -60,20 +68,14 @@ body {
   border: 1px solid rgba(255,255,255,0.1);
 
   animation-name: move-clock;
-  animation-duration: 5s;
+  animation-duration: 10s;
   animation-timing-function: linear;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 
-@keyframes move-clock {
-  0%   {left:0px; top:0px;}
-  25%  {left:900px; top:0px;}
-  50%  {left:900px; top:450px;}
-  75%  {left:0px; top:450px;}
-  100% {left:0px; top:0px;}
-}
+
 .container {
   display: flex;
   justify-content: center;
